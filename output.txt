@@ -1,0 +1,4 @@
+Largest number by brute approach 87
+Largest number by optimal approach 87
+Smallest number by brute approach 3
+Smallest number by optimal approach 3

@@ -12,6 +12,7 @@ public class insertion_sort {
             arr[i] = scanner.nextInt();
         }
 
+        //time complexity = O(n^2) for worst & O(n){when all equal}
         for (int i = 1; i < n; i++) {
             int j = i;
             while (j > 0 && arr[j - 1] > arr[j]) {

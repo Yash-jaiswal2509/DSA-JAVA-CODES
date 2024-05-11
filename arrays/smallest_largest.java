@@ -38,8 +38,8 @@ public class smallest_largest {
         return largestElement;
     }
 
-    // time complexity O(n)
     public static int optimalLargest(int[] arr, int n) {
+        // time complexity = O(n)
         int largestElement = arr[0];
         for (int i = 0; i < n; i++) {
             if (arr[i] > largestElement) {
@@ -66,6 +66,7 @@ public class smallest_largest {
     }
 
     public static int optimalSmallest(int[] arr, int n) {
+        // time complexity = O(n)
         int smallest = arr[0];
         for (int i = 0; i < n; i++) {
             if (arr[i] < smallest) {

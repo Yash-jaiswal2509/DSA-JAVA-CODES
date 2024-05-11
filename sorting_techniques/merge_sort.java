@@ -24,6 +24,7 @@ public class merge_sort {
 
     // Whatever we are doing here is with indexes not array
     public static void mergeSort(int[] array, int low, int high) {
+        //only equal is required but > is for safety
         if (low >= high)
             return;
 

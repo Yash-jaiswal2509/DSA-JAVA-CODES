@@ -29,6 +29,10 @@ public class bubble_sort {
                     arr[j] = temp;
                 }
             }
+            // for (int k = 0; k < n; k++) {
+            // System.out.print(arr[k] + " ");
+            // }
+            // System.out.println("");
         }
 
         for (int i = 0; i < n; i++) {

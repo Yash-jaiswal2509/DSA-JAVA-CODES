@@ -24,7 +24,7 @@ public class merge_sort {
 
     // Whatever we are doing here is with indexes not array
     public static void mergeSort(int[] array, int low, int high) {
-        //only equal is required but > is for safety
+        // only equal is required but > is for safety
         if (low >= high)
             return;
 
@@ -58,6 +58,8 @@ public class merge_sort {
             temp.add(array[right]);
             right++;
         }
+
+        System.out.println(temp);
 
         for (int i = low; i <= high; i++) {
             array[i] = temp.get(i - low);

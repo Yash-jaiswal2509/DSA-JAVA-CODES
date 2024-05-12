@@ -3,7 +3,7 @@ package arrays;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class second_largest {
+public class second_largest_smallest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -30,6 +30,7 @@ public class second_largest {
             int j = i;
             while (j > 0 && arr[j - 1] >= arr[j]) {
                 SwapNumbers(arr, j - 1, j);
+                j--;
             }
         }
 
@@ -52,9 +53,8 @@ public class second_largest {
                 largest = arr[i];
             }
         }
-
         for (int i = 0; i < n; i++) {
-            if (arr[i] > secondLargest && secondLargest < largest) {
+            if ((arr[i] > secondLargest) && (arr[i] < largest)) {
                 secondLargest = arr[i];
             }
         }
@@ -91,7 +91,7 @@ public class second_largest {
         }
 
         for (int i = 0; i < n; i++) {
-            if (arr[i] < secondSmallest && secondSmallest > smallest) {
+            if (arr[i] < secondSmallest && arr[i] > smallest) {
                 secondSmallest = arr[i];
             }
         }
@@ -105,6 +105,8 @@ public class second_largest {
             if (arr[i] < smallest) {
                 secondSmallest = smallest;
                 smallest = arr[i];
+            } else if (arr[i] < secondSmallest && secondSmallest != smallest) {
+                secondSmallest = arr[i];
             }
         }
         return secondSmallest;
@@ -112,8 +114,8 @@ public class second_largest {
 
     public static void SwapNumbers(int[] arr, int a, int b) {
         int temp = arr[a];
-        arr[b] = arr[a];
-        arr[a] = temp;
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 
     public static void mergeSort(int[] arr, int low, int high) {

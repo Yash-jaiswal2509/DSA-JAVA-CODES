@@ -1,6 +1,2 @@
-Rotated by one place:
-6 4 97 86 73 
-Rotated by d places:
-97 86 73 6 4 
-Rotated by d places through optimal approach:
-73 6 4 97 86 
+1 2 3 4 5 6 7 8 9 11 
+1 2 3 4 5 6 7 8 9 11 

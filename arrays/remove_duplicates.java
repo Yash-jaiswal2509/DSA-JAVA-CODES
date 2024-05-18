@@ -1,6 +1,5 @@
 package arrays;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -16,8 +15,8 @@ public class remove_duplicates {
         }
 
         usingBrute(arr, n);
-        usingOptimal(arr, n);
-
+        int k = usingOptimal(arr, n);
+        System.out.println(k);
         scanner.close();
     }
 
@@ -28,18 +27,18 @@ public class remove_duplicates {
             set.add(arr[i]);
         }
 
-        System.out.println("This is done by using set which doesn't takes duplicates " + set);
+        System.out.println(set.size());
     }
 
-    public static void usingOptimal(int[] arr, int n) {
+    public static int usingOptimal(int[] arr, int n) {
         // Time complexity = O(n)
-        ArrayList<Integer> array = new ArrayList<Integer>();
-        for (int i = 0; i < n - 1; i++) {
-            if (arr[i] != arr[i + 1]) {
-                array.add(arr[i]);
+        int i = 0;
+        for (int j = 0; j < n; j++) {
+            if (arr[i] != arr[j]) {
+                i++;
+                arr[i] = arr[j];
             }
         }
-
-        System.out.println(array);
+        return i + 1;
     }
 }

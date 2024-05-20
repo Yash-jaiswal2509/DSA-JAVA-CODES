@@ -13,7 +13,7 @@ public class re_arrange_pos_neg {
             arr[i] = scanner.nextInt();
         }
 
-        // by_brutal(arr, n);
+        by_brutal(arr, n);
         by_optimal(arr, n);
         scanner.close();
     }

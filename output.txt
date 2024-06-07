@@ -1,4 +1,5 @@
-Inserting words: Striver, Striving, String, Strike
-Search if Strawberry exists in trie: False
-Search if Strike exists in trie: True
-If words in Trie start with Stri: False
+Count Words Equal to 'apple': 1
+Count Words Starting With 'app': 4
+Erasing word 'app' from trie
+Count Words Equal to 'apple': 1
+Count Words Starting With 'app': 3

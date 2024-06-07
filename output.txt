@@ -1,1 +1,4 @@
-4
+Inserting words: Striver, Striving, String, Strike
+Search if Strawberry exists in trie: False
+Search if Strike exists in trie: True
+If words in Trie start with Stri: False

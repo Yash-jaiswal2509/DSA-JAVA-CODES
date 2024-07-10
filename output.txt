@@ -1,5 +1,10 @@
-Count Words Equal to 'apple': 1
-Count Words Starting With 'app': 4
-Erasing word 'app' from trie
-Count Words Equal to 'apple': 1
-Count Words Starting With 'app': 3
+8
+1668
+669
+1
+167
+29856
+279
+567
+2
+2

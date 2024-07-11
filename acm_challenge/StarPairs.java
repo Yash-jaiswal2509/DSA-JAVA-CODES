@@ -1,4 +1,3 @@
-package acm_challenge;
 
 import java.util.Scanner;
 

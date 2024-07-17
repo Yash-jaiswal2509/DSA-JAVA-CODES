@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "FashionFusion",
+      "request": "launch",
+      "mainClass": "FashionFusion",
+      "projectName": "Dsa JAVA_90aa806b"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",

@@ -1,61 +1,45 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class RearrangeArrays {
     public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(br.readLine().trim());
+        try (Scanner scan = new Scanner(System.in)) {
+            int t = scan.nextInt();
+            List<List<Integer>> list = new ArrayList<>();
 
-        while (t-- > 0) {
-            int n = Integer.parseInt(br.readLine().trim());
-            int[] p = new int[n];
-            int[] q = new int[n];
+            while (t-- > 0) {
+                int n = scan.nextInt();
+                int[] arr = new int[n];
 
-            String[] pInput = br.readLine().trim().split(" ");
-            String[] qInput = br.readLine().trim().split(" ");
-
-            for (int i = 0; i < n; i++) {
-                p[i] = Integer.parseInt(pInput[i]);
-                q[i] = Integer.parseInt(qInput[i]);
-            }
-
-            Arrays.sort(p);
-            Arrays.sort(q);
-
-            boolean isPos = true;
-
-            for (int i = 0; i < n; i++) {
-                if (p[i] > q[i]) {
-                    isPos = false;
-                    break;
+                for (int i = 0; i < n; i++) {
+                    arr[i] = i + 1;
                 }
+
+                // if (n % 2 == 0) {
+
+                // }
+
+                int sum = 0;
+                if (n % 2 == 1) {
+                    for (int i = 0; i < n / 2; i++) {
+                        int firstEl = arr[i];
+                        int secondEl = arr[i + 1];
+                        int largeEl = arr[n - 1 - i];
+
+                        sum += largeEl - firstEl;
+                        sum += largeEl - secondEl;
+                    }
+                    if (n > 5) {
+                        sum += arr[(n / 2) + 1] - arr[n / 2];
+                        sum += arr[n / 2] - arr[(n / 2) - 1];
+                    }
+
+                }
+                System.out.println(" " + sum);
+
             }
-
-            if (isPos) {
-                isPos = helper(p);
-            }
-
-            System.out.println(isPos ? "YES" : "NO");
         }
-    }
-
-    private static boolean helper(int[] arr) {
-        int n = arr.length;
-        Map<Integer, Integer> freqMap = new HashMap<>();
-        for (int num : arr) {
-            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
-        }
-
-        int maxFreq = Collections.max(freqMap.values());
-        return maxFreq <= (n + 1) / 2;
     }
 }
-
-
-
-
-// Exception in thread "main" java.util.InputMismatchException: For input string: "29203464463"
-// 	at java.base/java.util.Scanner.nextInt(Scanner.java:2264)
-// 	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
-// 	at TestClass.main(TestClass.java:11)

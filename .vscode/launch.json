@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "a",
+      "request": "launch",
+      "mainClass": "a",
+      "projectName": "Dsa JAVA_90aa806b"
+    },
+    {
+      "type": "java",
       "name": "FashionFusion",
       "request": "launch",
       "mainClass": "FashionFusion",
